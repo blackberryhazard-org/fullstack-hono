@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans;
+    border-radius: 0 !important;
+  }
+
+  * {
+    border-radius: 0 !important;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-container text-on-primary-container font-bold px-lg py-sm transition-all duration-150 hover:brightness-110 active:brightness-90;
+  }
+
+  .btn-secondary {
+    @apply border border-primary text-primary font-semibold px-lg py-sm transition-all duration-150 hover:bg-primary/10;
+  }
+
+  .input-field {
+    @apply bg-surface-container border border-outline-variant text-on-surface px-md py-sm focus:outline-none focus:border-primary placeholder:text-on-surface-variant/60;
+  }
+
+  .card {
+    @apply bg-surface-container border border-white/5 transition-all duration-150 hover:bg-surface-container-high hover:border-primary;
+  }
+
+  .label-md {
+    @apply text-[14px] font-semibold uppercase tracking-[0.05em];
+  }
+}
